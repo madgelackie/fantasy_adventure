@@ -1,4 +1,4 @@
-import People.Enemy;
+import People.Enemies.Enemy;
 import People.EnemyType;
 import org.junit.Before;
 import org.junit.Test;
