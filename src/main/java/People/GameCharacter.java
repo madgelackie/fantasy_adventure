@@ -1,7 +1,6 @@
 package People;
 
-import Behaviours.IWeapon;
-import Items.Weapons.Weapon;
+import Items.Harm.Weapon;
 
 public abstract class GameCharacter {
     
@@ -19,7 +18,8 @@ public abstract class GameCharacter {
         this.healthPoints = healthPoints;
     }
 
-    public abstract void receiveDamage(IWeapon weaponType){
-        healthPoints -= Weapon.getDamageCount();
-    };
+    public void receiveDamage(Weapon weapon){
+        setHealthPoints(weapon.rolledDamage());
+    }
+
 }

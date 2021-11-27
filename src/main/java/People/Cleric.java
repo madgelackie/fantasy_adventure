@@ -1,4 +1,4 @@
-package People.Players;
+package People;
 
 public class Cleric {
 }
