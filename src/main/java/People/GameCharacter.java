@@ -1,10 +1,10 @@
 package People;
 
-import Items.Harm.Weapon;
+import Items.Harm.IDamager;
 
 public abstract class GameCharacter {
     
-    protected int healthPoints;
+    private int healthPoints;
 
     public GameCharacter(int healthPoints) {
         this.healthPoints = healthPoints;
@@ -18,8 +18,8 @@ public abstract class GameCharacter {
         this.healthPoints = healthPoints;
     }
 
-    public void receiveDamage(Weapon weapon){
-        setHealthPoints(weapon.rolledDamage());
+    public void receiveDamage(IDamager damager){
+        setHealthPoints(damager.getDamageCount());
     }
 
 }
